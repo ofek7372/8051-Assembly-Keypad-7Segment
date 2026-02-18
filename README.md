@@ -94,7 +94,7 @@ If key **F** is pressed:
 
 #  Part B – 2-Digit Decimal Adder
 
-The system was extended into a simple calculator.
+The system can be extended into a simple calculator.
 
 ## Key Reassignment
 
@@ -127,12 +127,10 @@ The program is logically structured into:
 1. 8255 initialization  
 2. Key detection and decoding  
 3. Index conversion routine  
-4. Register shifting routine  
-5. Calculator logic (Part B)  
-6. Multiplexed display routine  
-7. Debounce handling  
+4. Register shifting routine   
+5. Multiplexed display routine  
+6. Debounce handling  
 
-The display routine from Part A is reused in Part B.
 
 ---
 
