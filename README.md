@@ -63,10 +63,13 @@ Control word used: `81h`
 - Individual digits enabled via lower 4 bits of Port B  
 - Four display registers used:
 
-R0 -> rightmost digit
-R1
-R2
 R3-> leftmost digit
+R2
+R1
+R0 -> rightmost digit
+
+
+
 
 
 - Rapid cycling through digits creates flicker-free illumination  
