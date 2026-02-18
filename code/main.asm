@@ -1,5 +1,24 @@
-;some useful bit address equates 
-;-------initilization of usfull bits-------
+
+;====================================================
+; Main Program Flow
+; 1. Initialize 8255
+; 2. Clear display registers
+; 3. Main loop:
+;       - Check key press
+;       - If pressed → decode → shift → update
+;       - Refresh display
+;====================================================
+
+
+
+;====================================================
+; 8051 Keypad & 7-Segment Calculator
+; Author: Ofek Witkon
+;====================================================
+
+;==============================
+; 1. Bit Definitions / Equates
+;==============================
 RDpin equ 0B3h ;p3.3 
 WRpin equ 0B2h ;p3.2
 A0pin equ 0B5h ;p3.5
@@ -8,9 +27,13 @@ A1pin equ 0B4h ;p3.4
 row4bit equ R6;-used when a keypress is detected 
 collom4bit equ R5
 ;--------------------------------
+
 org 8000h 
-start: 
-;configure 8255 control register 
+
+;==============================
+;  Program Start
+;==============================
+start:  
 setb A0pin
 setb A1pin
 setb WRpin
@@ -250,6 +273,12 @@ ret
 
 
 org 8500h 
+
+;==============================
+; Lookup Tables
+;==============================
+
+
 ;(1-8000h,2-8001h,3-8002h,F-8003h,
 ; 4-8004h,5-8005h,6-8006h,E-8007h,
 ; 7-8008h,8-8009h,9-800Ah,D-800Bh,
