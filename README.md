@@ -63,9 +63,9 @@ Control word used: `81h`
 - Individual digits enabled via lower 4 bits of Port B  
 - Four display registers used:
 
-R3-> leftmost digit
-R2
-R1
+R3-> leftmost digit, 
+R2, 
+R1, 
 R0 -> rightmost digit
 
 
@@ -81,9 +81,9 @@ R0 -> rightmost digit
 
 On every valid key press:
 
-R3 new <- R2 old
-R2 new <- R1 old 
-R1 new <- R0 old 
+R3 new <- R2 old, 
+R2 new <- R1 old , 
+R1 new <- R0 old , 
 R0 new <- new key segment code
 
 
